@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Haunted_Town/_scenes/demo1.unity
+  isLoaded: 1
+  isActive: 1
