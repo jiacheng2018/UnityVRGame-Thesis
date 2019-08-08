@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Unity Project (27) copy", "Assembly-CSharp.csproj", "{11BC16A7-C6C5-79C7-A86D-72D882B5B036}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{11BC16A7-C6C5-79C7-A86D-72D882B5B036}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Unity Project (27) copy", "Assembly-CSharp-firstpass.csproj", "{56726521-2747-1F45-98F0-B9A7B592C88B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{56726521-2747-1F45-98F0-B9A7B592C88B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Unity Project (27) copy", "Assembly-CSharp-Editor.csproj", "{3430D607-C129-9D87-1B6C-A4399B4E7214}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{3430D607-C129-9D87-1B6C-A4399B4E7214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

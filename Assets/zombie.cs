@@ -8,13 +8,16 @@ public class zombie : MonoBehaviour {
     private Transform player;
     public float HP = 10;
 
+    public AudioSource audio;
+    public float waiteTime = 0f;
+
 	// Use this for initialization
 	void Start () {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-	
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,6 +32,14 @@ public class zombie : MonoBehaviour {
         {
             //animator.SetBool("attack", true);
             animator.Play("attack");
+            waiteTime -= Time.deltaTime;
+            if (waiteTime<=0)
+            {
+                audio.Play();
+                waiteTime = 2;
+            }
+           
+            playerssss.instance.Damage();
             if (agent.enabled)
                 agent.Stop();
         }

@@ -10,9 +10,13 @@ public class LeftWeapon : MonoBehaviour {
 
     public GameObject prefabHit;
 
+    public AudioSource audio;
+
+
+
     void Awake()
     {
-        //获取手柄脚本组件
+        //Get Component
         trackedObj = GetComponent<SteamVR_TrackedObject>();
     }
 
@@ -26,7 +30,7 @@ public class LeftWeapon : MonoBehaviour {
     void FixedUpdate()
     {
 
-        //获取手柄输入
+        //Gain Input
         var device = SteamVR_Controller.Input((int)trackedObj.index);
 
 
@@ -36,10 +40,12 @@ public class LeftWeapon : MonoBehaviour {
             Destroy(go,1);
             RaycastHit info;
 
+            audio.Play();
+
             bool hit = Physics.Raycast(GunKou.position, GunKou.TransformDirection(Vector3.forward),out info,200);
             if (hit)
             {
-                //生成开枪特效
+                //Generate shooting
                 GameObject go1= Instantiate(PrefabFire);
                 go1.transform.position = info.point;
 
@@ -50,7 +56,7 @@ public class LeftWeapon : MonoBehaviour {
 
                 }
             }
-            Debug.Log("按下扳机键");
+            Debug.Log("Presssed Down the key");
         }
 
 
